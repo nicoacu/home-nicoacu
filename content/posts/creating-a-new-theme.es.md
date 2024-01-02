@@ -21,7 +21,7 @@ Dans ce tutoriel, les commandes que vous entrez commenceront par l'invite "$". L
 
 Voici un exemple :
 
-```
+```bash
 ## Ceci est un commentaire
 $ echo ceci est une commande
 ceci est une commande
@@ -120,7 +120,7 @@ Utilisons Hugo pour créer un nouveau site Web. Je suis un utilisateur Mac, alor
 
 La commande "new site" créera un squelette d'un site. Il vous donnera la structure de répertoire de base et un fichier de configuration utilisable.
 
-```
+```bash
 $ hugo new site ~/Sites/zafta
 $ cd ~/Sites/zafta
 $ ls -l
@@ -143,7 +143,7 @@ Les autres répertoires (archetypes/, layouts/ et static/) sont utilisés lors d
 
 Éxécuter la commande `hugo` sans options permet de lire tout le contenu disponible et de générer les fichiers HTML. Il copiera également tous les fichiers statiques (tout ce qui n'est pas du contenu). Comme nous avons un site vide, il ne fera pas grand chose, mais il le fera très rapidement.
 
-```
+```yaml
 $ hugo --verbose
 INFO: 2014/09/29 Using config file: config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
@@ -164,7 +164,7 @@ Le drapeau "`--verbose` "donne des informations supplémentaires qui seront util
 
 Nous pouvons vérifier que la commande a fonctionné en regardant de nouveau le répertoire.
 
-```
+```bash
 $ ls -l
 total 8
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 archetypes

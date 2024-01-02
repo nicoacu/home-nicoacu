@@ -8,7 +8,7 @@ paginate     = 10
   posts = "/posts/:year/:month/:title/"
 
 [taxonomies]
-    category = "blog"
+    category = "categories"
     tag      = "tags"
     series   = "series"  
 
@@ -19,14 +19,11 @@ paginate     = 10
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
 
-  # Subtitle for home
-  homeSubtitle = "Hi! 😄 SRE/DevOps engineer @ SIU"
-
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
 
   # Enable sharing buttons, if you like
-  enableSharingButtons = true
+  enableSharingButtons = false
   
   # Show a global language switcher in the navigation bar
   enableGlobalLanguageMenu = true
@@ -48,40 +45,77 @@ paginate     = 10
     copyright = true
     author = true
 
-    topText = []
+    topText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>"
+    ]
     bottomText = [
-      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
       "Template made by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a> and customized by <a href=\"https://github.com/nicoacu\">me</a>."
     ]  
 
 [languages]
   [languages.en]
-    title = "Nicolas Ignacio Acuna"
+    title = "Nico Acuna"
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
   [languages.en.params]
-    subtitle  = "A simple theme for Hugo"
+    homeSubtitle = "Here's where I document everything that I think will need in the future so...You're welcome future me <3"
+    subtitle  = "en"
     readOtherPosts = "Read other posts"  
-    keywords = ""
+    keywords = "nicoacu, nicolas ignacio acu"
 
     [languages.en.params.logo]
     logoMark     = ">"
     logoText     = "$cd /index/"
     logoHomeLink = "/"
-    # Set true to remove the logo cursor entirely.
-    logoCursorDisabled = false
-    # Set to a valid CSS color to change the cursor in the logo.
-    logoCursorColor    = "#ffa500"
-    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
-    # logoCursorAnimate  = "2s"
-    # Append the current url pathname to logoText 
-    logoCursorPathname = true
+    logoCursorDisabled = false # Set true to remove the logo cursor entirely.
+    logoCursorColor    = "#ffa500" # Set to a valid CSS color to change the cursor in the logo.
+    #logoCursorAnimate  = "2s"    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    logoCursorPathname = true    # Append the current url pathname to logoText
+
+    [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+    weight     = 10
+
+    [[menu.main]]
+    identifier = "bibliops"
+    name       = "Bibliops"
+    url        = "/wiki"
+
+
+  [languages.es]
+    title = "Nico Acuña"
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    
+  [languages.es.params]
+    homeSubtitle = "Acá es donde documento todo lo que creo que me va a servir en el futuro asi que...de nada futuro yo <3"
+    subtitle  = "es"
+    readOtherPosts = "Read other posts"  
+    keywords = "nicoacu, nicolas ignacio acu"
+
+    [languages.es.params.logo]
+    logoMark     = ">"
+    logoText     = "$cd /index/"
+    logoHomeLink = "/"
+    logoCursorDisabled = false # Set true to remove the logo cursor entirely.
+    logoCursorColor    = "#ffa500" # Set to a valid CSS color to change the cursor in the logo.
+    #logoCursorAnimate  = "2s"    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    logoCursorPathname = true    # Append the current url pathname to logoText 
+
+    #MENUS ESPANOL
+    [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+    weight     = 10
+
+    [[menu.main]]
+    identifier = "bibliops"
+    name       = "Bibliops"
+    url        = "/wiki"
 
   # And you can even create generic menu
-
-  [[params.social]]
-    name = "email"
-    url  = "mailto:nobody@example.com"
 
   [[params.social]]
     name = "github"
@@ -92,24 +126,16 @@ paginate     = 10
     url  = "https://www.linkedin.com/in/nicolasignacioacu/"
 
   [menu]
-  [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
-    weight     = 10
-
-  [[menu.main]]
-    identifier = "bibliops"
-    name       = "Bibliops"
-    url        = "/wiki"
 
 [[menu.main]]
   identifier = "cv"
   name = "CV"
   url = 'https://nicoacu.github.io/CV/'
+  rel="external"
+  target="_blank"
+
   [menu.main.params]
-    rel="external"
-    target="_blank"
+    
 
 
 
