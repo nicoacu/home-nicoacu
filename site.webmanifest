@@ -1,0 +1,8 @@
+{
+  "name": "nacuna home",
+  "short_name": "nacuna home",
+  "icons": [],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
